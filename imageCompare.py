@@ -10,6 +10,9 @@ def extract_total_difference(output):
 		return "Invalid"
 	return round(Decimal(output),2)
 
+
+print "hello"
+
 metric = "MAE"
 image_folder_path = "images"
 csv.register_dialect('myDialect', delimiter = ',', skipinitialspace=True)
@@ -21,6 +24,7 @@ reader = csv.reader(csv_file, dialect="myDialect")
 reader.next()
 writer = csv.writer(augmented_csv_file)
 writer.writerow(["image1","image2","similar","elapsed"])
+
 
 for row in reader:
 	image1 = image_folder_path+"/"+row[0]
